@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap');
+
+header {
+    background: url('../images/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+}
+
+.navbar {
+    z-index: 1;
+    width: 100%;
+}
+
+.title-section,
+.form-container {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.title-section {
+    margin-bottom: 40px; /* Add space between title section and menu */
+}
+
+.form-container {
+    background-color: transparent;
+    border: 1px solid #a37a00; /* Gold border */
+    padding: 20px;
+    border-radius: 0px; /* Square corners */
+}
+
+.form-input {
+    height: 50px; /* Increase input height */
+    border-radius: 0px; /* Square corners */
+}
+
+.luxury-font {
+    font-family: 'Great Vibes', cursive;
+}
+
+.text-gradient-large {
+    color: #b58b11;
+    background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100% );
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1rem; /* Adjust as needed */
+}
+
+.text-gradient {
+    color: #b58b11;
+    background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100% );
+    color: transparent;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-size: 1.25rem; Default font size for menu items */
+}
+
+.nav-link {
+    font-size: 1.125rem; /* Font size for menu */
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+h1.luxury-font {
+    font-size: 5rem; /* Adjust as needed */
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem; /* Adjust as needed */
+    color: white;
+}
+
+.form-container p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem; /* Adjust as needed */
+    color: white;
+}
+
+.button {
+    color: #ffffff;
+    background-color: #b58b11;
+    border-color: #b58b11;
+    background: rgb(189,127,3);
+    background: linear-gradient(256deg, rgba(189,127,3,1) 0%, rgba(200,154,0,1) 100%);
+    border-width: thin;
+    display: block;
+    width: 100%;
+
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    padding: 18px 38px 14px;
+    
+}
+.button:hover {
+    color: #ffffff;
+    background: #8c6d10 !important;
+    border-color: #c79a14;
+    cursor: pointer;
+
+}
+
+input{
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    padding: 18px 38px 14px;
+}
+
+@media (max-width: 768px) {
+    .title-section {
+        margin-bottom: 20px;
+    }
+
+    h1.luxury-font {
+        font-size: 2.5rem; /* Adjust as needed */
+    }
+
+    .subtitle {
+        font-size: 1rem; /* Adjust as needed */
+    }
+}
