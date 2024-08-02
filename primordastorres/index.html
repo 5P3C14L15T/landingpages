@@ -62,11 +62,9 @@
                         <p>Entre em contato para mais informações:</p>
                         <form>
                             <div class="mb-3">
-                                
                                 <input placeholder="Nome" type="text" class="form-control form-input" id="name" required>
                             </div>
                             <div class="mb-3">
-                               
                                 <input placeholder="WhatsApp" type="text" class="form-control form-input" id="whatsapp" required>
                             </div>
                             <button type="submit" class="button">Enviar</button>
@@ -78,7 +76,50 @@
     </header>
 
     <main>
-        <section id="primor"></section>
+        <!-- New Section -->
+        <section id="primor" class="d-flex" style="background-color: #2a2b31;">
+            <div class="container py-5 d-flex">
+                <div class="row align-items-center w-100">
+                    <!-- Slideshow -->
+                    <div class="col-md-8">
+                        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/slide1.jpg" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/slide2.jpg" class="d-block w-100" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/slide3.jpg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Information Section -->
+                    <div class="col-md-4">
+                        <h2 class="text-white">POR QUE ESCOLHER O PRIMOR</h2>
+                        <div id="slideshow-info">
+                            <h3 class="text-white dynamic-title">Título Dinâmico 1</h3>
+                            <p class="text-white">Descrição correspondente ao slide 1.</p>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3">
+                            <button class="btn btn-outline-light" id="prev-slide"> < </button>
+                            <button class="btn btn-outline-light" id="next-slide"> > </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="casa-terrea"></section>
         <section id="caracteristicas"></section>
         <section id="galeria"></section>
