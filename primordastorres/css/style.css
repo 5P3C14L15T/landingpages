@@ -21,6 +21,7 @@ header::before {
 .navbar {
     z-index: 1;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .title-section,
@@ -31,57 +32,106 @@ header::before {
 }
 
 .title-section {
-    margin-bottom: 40px; /* Add space between title section and menu */
+    margin-bottom: 40px;
+    /* Add space between title section and menu */
 }
 
 .form-container {
     background-color: transparent;
-    border: 1px solid #ffd700; /* Gold border */
+    border: 1px solid #ffd700;
+    /* Gold border */
     padding: 20px;
-    border-radius: 0px; /* Square corners */
+    border-radius: 0px;
+    /* Square corners */
 }
 
 .form-input {
-    height: 50px; /* Increase input height */
-    border-radius: 0px; /* Square corners */
+    height: 50px;
+    /* Increase input height */
+    border-radius: 0px;
+    /* Square corners */
+}
+
+.form-p {
+    /* background-color: #2a2b31; */
+    font-size: 1em;
+    font-weight: 100;
 }
 
 .luxury-font {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+
 }
 
 .text-gradient-large {
-    background: linear-gradient(to right, #ffd700, #e6b800, #cc9900, #b37800, #996600);
+    /* background: linear-gradient(to right, #ffd700, #e6b800, #cc9900, #b37800, #996600); */
+    background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 4rem; /* Adjust as needed */
+    font-size: 3rem;
+    /* Adjust as needed */
 }
 
 .text-gradient {
-    background: linear-gradient(to right, #ffd700, #e6b800, #cc9900, #b37800, #996600);
+    /* background: linear-gradient(to right, #ffd700, #e6b800, #cc9900, #b37800, #996600); */
+    background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Great Vibes', cursive;
+
 }
 
-.nav-link:hover {
-    color: #ffd700;
-    text-decoration: underline;
+
+.subtitle {
+    font-family: 'Roboto';
+    font-weight: 100 !important;
+    font-size: 1.2em;
+}
+
+.nav-link {
+    font-size: 1.2em;
+    /* background: linear-gradient(to right, #d4af37, #ffd700); */
+    background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Navbar Link Hover Effect */
+.nav-item:hover {
+    color: #aca38c;
+    text-decoration: underline !important;
+    /* Add underline on hover */
+    cursor: pointer !important;
+    z-index: 99 !important;
 }
 
 .button {
-    background-color: #ffd700;
-    color: black;
-    border: 1px solid #ffd700;
+    /* background: linear-gradient(to right, #ffd700, #e6b800, #cc9900, #b37800, #996600); */
+    background: linear-gradient(256deg, rgba(189, 127, 3, 1) 0%, rgba(200, 154, 0, 1) 100%);
+
+    /* background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100% ); */
+    color: white;
+    border: 1px solid #3d3d3d;
     width: 100%;
-    height: 50px;
-    border-radius: 0px; /* Square corners */
+    height: 40px;
+    border-radius: 0px;
+    /* Square corners */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
 .button:hover {
-    background-color: black;
-    color: #ffd700;
-    border-color: black;
+    background: linear-gradient(256deg, rgb(131, 94, 19) 0%, rgb(165, 131, 19) 100%);
+    color: white;
+
+}
+
+input {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
 }
 
 /* New Section Styles */
@@ -94,6 +144,272 @@ header::before {
     filter: invert(100%);
 }
 
+.carousel-indicators button {
+    background-color: #ffd700;
+}
+
 .dynamic-title {
     transition: all 0.3s ease;
 }
+
+#slideshow-info {
+    background-color: #2a2b31;
+    color: white;
+    height: 100%;
+}
+
+#slideshow-info h2 {
+    margin-bottom: 30px;
+}
+
+#slideshow-info h3 {
+    margin-bottom: 15px;
+}
+
+#slideshow-info p {
+    margin-bottom: 20px;
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    width: 45px;
+    height: 45px;
+    border-radius: 0px;
+    /* Square corners */
+}
+
+.btn-outline-light:hover {
+    background-color: #ffd700;
+    color: black;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    /* Adjust the height as needed */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: static;
+    margin: 0 5px;
+}
+
+.carousel-indicators button {
+    background-color: #ffd700;
+}
+
+.dynamic-title {
+    transition: all 0.5s ease;
+}
+
+/* Botões de controle do slide */
+.btn-slide-control {
+    background-color: rgba(248, 205, 150, 0.33);
+    border: none;
+    color: rgba(32, 31, 28, 0.7);
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    width: 55px;
+    border-radius: 0;
+}
+
+.btn-slide-control:hover {
+    background-color: rgba(214, 136, 34, 0.884);
+    color: white;
+}
+
+/* Garantir que o col-md-4 ocupe toda a altura da coluna */
+.col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/* Estilo do título h2 */
+h2.mb-4 {
+    margin-top: 0;
+}
+
+/* Centralizar o conteúdo do slideshow-info */
+#slideshow-info {
+    text-align: left !important;
+}
+
+/* Botões de controle do slide */
+.btn-slide-control {
+    background-color: rgba(248, 205, 150, 0.33);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.btn-slide-control:hover {
+    background-color: rgba(248, 205, 150, 0.66);
+}
+
+.titulo-primor {
+    font-size: 2em;
+    background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+.dynamic-title {
+    margin-top: 50px;
+    font-size: 3em;
+    background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Background image for the Caracteristicas section */
+#caracteristicas {
+    position: relative;
+    background: url('../images/caracteristicas-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+#caracteristicas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay to make text stand out */
+}
+
+#caracteristicas .container {
+    position: relative;
+    z-index: 1;
+}
+
+#caracteristicas .col-md-4 {
+    padding: 20px;
+}
+
+#caracteristicas i {
+    color: #8b7d5e; /* Gold color for icons */
+}
+
+#caracteristicas h3{
+    font-size: 2em;
+    background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Ajuste para o modo responsivo no mobile */
+@media (max-width: 768px) {
+    .text-gradient-large {
+        /* background: linear-gradient(to right, #ffd700, #e6b800, #cc9900, #b37800, #996600); */
+        background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+        /* Adjust as needed */
+    }
+    #slideshow-info {
+        /* background-color: red; */
+        height: auto !important;
+       
+    }
+
+    .col-md-4 {
+        display: inline;
+    }
+
+    /* Ajusta o padding para a seção primor */
+    #primor {
+        
+    }
+
+    /* Ajusta o padding para a seção caracteristicas */
+    #caracteristicas {
+      
+    }
+}
+
+
+/* vídeo */#video-tour {
+    background-color: #2a2b31;
+    color: #ffffff;
+}
+
+#video-tour h2, #video-tour h3 {
+    font-family: 'Luxury', sans-serif; /* Substitua pela fonte que você está utilizando */
+    color: #ffd700; /* Cor dourada */
+}
+
+#video-tour p {
+    font-family: 'Luxury', sans-serif; /* Substitua pela fonte que você está utilizando */
+    color: #ffffff;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    #video-tour .col-md-4 {
+        margin-bottom: 30px; /* Adiciona espaçamento abaixo do col-md-4 */
+    }
+}
+
+
+/* galeria */
+
+
+#gallery {
+    background-color: #2a2b31;
+    color: #ffffff;
+}
+
+#gallery h2 {
+    font-family: 'Luxury', sans-serif; /* Substitua pela fonte que você está utilizando */
+    color: #ffd700; /* Cor dourada */
+}
+
+#gallery .row {
+    margin: 0;
+}
+
+#gallery .col-md-3,
+#gallery .col-sm-6 {
+    padding: 0;
+}
+
+#gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0; /* Remove bordas, se houver */
+}
+

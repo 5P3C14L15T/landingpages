@@ -8,10 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS v5.3.2 -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  
+
+
 </head>
 
 <body>
@@ -54,18 +63,21 @@
                 <div class="col-md-8">
                     <div class="title-section">
                         <h1 class="luxury-font text-gradient-large">Casa Térrea no Condomínio Primor das Torres</h1>
-                        <p class="subtitle">Uma oportunidade única de morar no condomínio que mais valoriza em Cuiabá.</p>
+                        <p class="subtitle">Uma oportunidade única de morar no condomínio que mais valoriza em Cuiabá.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-container">
-                        <p>Entre em contato para mais informações:</p>
+                        <p class="form-p">Entre em contato para mais informações:</p>
                         <form>
                             <div class="mb-3">
-                                <input placeholder="Nome" type="text" class="form-control form-input" id="name" required>
+                                <input placeholder="Nome" type="text" class="form-control form-input" id="name"
+                                    required>
                             </div>
                             <div class="mb-3">
-                                <input placeholder="WhatsApp" type="text" class="form-control form-input" id="whatsapp" required>
+                                <input placeholder="WhatsApp" type="text" class="form-control form-input" id="whatsapp"
+                                    required>
                             </div>
                             <button type="submit" class="button">Enviar</button>
                         </form>
@@ -77,12 +89,21 @@
 
     <main>
         <!-- New Section -->
+        <!-- New Section -->
         <section id="primor" class="d-flex" style="background-color: #2a2b31;">
             <div class="container py-5 d-flex">
                 <div class="row align-items-center w-100">
                     <!-- Slideshow -->
                     <div class="col-md-8">
-                        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="images/slide1.jpg" class="d-block w-100" alt="Slide 1">
@@ -94,32 +115,137 @@
                                     <img src="images/slide3.jpg" class="d-block w-100" alt="Slide 3">
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
                     </div>
 
                     <!-- Information Section -->
-                    <div class="col-md-4">
-                        <h2 class="text-white">POR QUE ESCOLHER O PRIMOR</h2>
-                        <div id="slideshow-info">
-                            <h3 class="text-white dynamic-title">Título Dinâmico 1</h3>
-                            <p class="text-white">Descrição correspondente ao slide 1.</p>
+                    <div class="col-md-4 text-white" style="height: 100%;">
+                        <h2 class="mb-4 titulo-primor luxury-font1">POR QUE ESCOLHER O PRIMOR</h2>
+                        <div id="slideshow-info" class="text-center">
+                            <h3 class="dynamic-title">Título Dinâmico 1</h3>
+                            <p class="dynamic-description">Descrição correspondente ao slide 1.</p>
                         </div>
-                        <div class="d-flex justify-content-between mt-3">
-                            <button class="btn btn-outline-light" id="prev-slide"> < </button>
-                            <button class="btn btn-outline-light" id="next-slide"> > </button>
+                        <div class="d-flex justify-content-start mt-3">
+                            <button class="btn btn-slide-control" id="prev-slide">
+                                < </button>
+                                    <button class="btn btn-slide-control" id="next-slide"> > </button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- /New Section -->
+
+        <!-- características -->
+        <!-- Seção Características -->
+        <section id="caracteristicas" class="text-white">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-4 mb-4 text-center">
+                        <i class="fas fa-home fa-3x mb-3"></i>
+                        <h3 class="luxury-font">Casa</h3>
+                        <p>Descrição correspondente ao bloco 1.</p>
+                    </div>
+                    <div class="col-md-4 mb-4 text-center">
+                        <i class="fas fa-drafting-compass fa-3x mb-3"></i>
+                        <h3 class="luxury-font">Planta de Área</h3>
+                        <p>Descrição correspondente ao bloco 2.</p>
+                    </div>
+                    <div class="col-md-4 mb-4 text-center">
+                        <i class="fas fa-tree fa-3x mb-3"></i>
+                        <h3 class="luxury-font">Natureza</h3>
+                        <p>Descrição correspondente ao bloco 3.</p>
+                    </div>
+                    <div class="col-md-4 mb-4 text-center">
+                        <i class="fas fa-swimming-pool fa-3x mb-3"></i>
+                        <h3 class="luxury-font">Piscina</h3>
+                        <p>Descrição correspondente ao bloco 4.</p>
+                    </div>
+                    <div class="col-md-4 mb-4 text-center">
+                        <i class="fas fa-child fa-3x mb-3"></i>
+                        <h3 class="luxury-font">Parque</h3>
+                        <p>Descrição correspondente ao bloco 5.</p>
+                    </div>
+                    <div class="col-md-4 mb-4 text-center">
+                        <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                        <h3 class="luxury-font">Segurança</h3>
+                        <p>Descrição correspondente ao bloco 6.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- /características -->
+
+        <!-- video -->
+        <!-- Seção Vídeo Tour -->
+
+        <section id="video-tour" class="d-flex" style="background-color: #2a2b31;">
+            <div class="container py-5 d-flex">
+                <div class="row align-items-center w-100">
+                    <!-- Information Section -->
+                    <div class="col-md-4 text-white pt-5" style="height: 100%;">
+                        <h2 class="mb-4 titulo-primor luxury-font1">VÍDEO TOUR</h2>
+                        <div id="slideshow-info" class="text-center">
+                            <h3 class="dynamic-title">CASA TÉRREA</h3>
+                            <p class="dynamic-description">Descrição correspondente ao slide 1.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Video Section -->
+                    <div class="col-md-8">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/mShNingLCfo" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+        <!-- /video -->
+
+        <!-- galeria -->
+        <!-- Seção Galeria -->
+        <section id="gallery" class="d-flex flex-column align-items-center py-5">
+            <div class="">
+                
+                <div class="row">
+                    <!-- Imagens da Galeria -->
+                    <div class="col-md-2 col-sm-6 p-0">
+                        <a href="images/1.jpg" data-fancybox="gallery" data-caption="Imagem 1">
+                            <img src="images/1.jpg" class="img-fluid" alt="Imagem 1">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6 p-0">
+                        <a href="images/2.jpg" data-fancybox="gallery" data-caption="Imagem 1">
+                            <img src="images/2.jpg" class="img-fluid" alt="Imagem 1">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6 p-0">
+                        <a href="images/3.jpg" data-fancybox="gallery" data-caption="Imagem 1">
+                            <img src="images/3.jpg" class="img-fluid" alt="Imagem 1">
+                        </a>
+                    </div>
+                    
+                  
+                   
+                    <!-- Adicione mais blocos de imagem conforme necessário -->
+                    <!-- Repetir para todas as 20 imagens -->
+                </div>
+            </div>
+        </section>
+
+        <!-- /galeria -->
+
+
+
         <section id="casa-terrea"></section>
         <section id="caracteristicas"></section>
         <section id="galeria"></section>
@@ -127,13 +253,29 @@
     </main>
     <footer></footer>
     <!-- Bootstrap JavaScript Libraries -->
+     
+  
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>  
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'fadeDuration': 600
+    });
+</script>
+        
+
     <script src="js/script.js"></script>
 </body>
 

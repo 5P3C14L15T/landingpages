@@ -1,38 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const titles = [
-        "Título Dinâmico 1",
-        "Título Dinâmico 2",
-        "Título Dinâmico 3"
+    const slides = [
+        {
+            title: 'Título Dinâmico 1',
+            description: 'Descrição correspondente ao slide 1.'
+        },
+        {
+            title: 'Título Dinâmico 2',
+            description: 'Descrição correspondente ao slide 2.'
+        },
+        {
+            title: 'Título Dinâmico 3',
+            description: 'Descrição correspondente ao slide 3.'
+        }
     ];
 
-    const descriptions = [
-        "Descrição correspondente ao slide 1.",
-        "Descrição correspondente ao slide 2.",
-        "Descrição correspondente ao slide 3."
-    ];
+    let currentSlide = 0;
 
-    const dynamicTitle = document.querySelector('#slideshow-info .dynamic-title');
-    const dynamicDescription = document.querySelector('#slideshow-info p');
+    const titleElement = document.querySelector('.dynamic-title');
+    const descriptionElement = document.querySelector('.dynamic-description');
 
-    const prevButton = document.getElementById('prev-slide');
-    const nextButton = document.getElementById('next-slide');
-
-    let currentIndex = 0;
-
-    function updateContent(index) {
-        dynamicTitle.textContent = titles[index];
-        dynamicDescription.textContent = descriptions[index];
+    function updateSlide() {
+        titleElement.textContent = slides[currentSlide].title;
+        descriptionElement.textContent = slides[currentSlide].description;
+        document.querySelectorAll('.carousel-item').forEach((item, index) => {
+            item.classList.toggle('active', index === currentSlide);
+        });
+        document.querySelectorAll('.carousel-indicators button').forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentSlide);
+        });
     }
 
-    prevButton.addEventListener('click', function () {
-        currentIndex = (currentIndex === 0) ? titles.length - 1 : currentIndex - 1;
-        updateContent(currentIndex);
+    document.getElementById('prev-slide').addEventListener('click', function () {
+        currentSlide = (currentSlide - 1 + slides.length) < 0 ? slides.length - 1 : (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
     });
 
-    nextButton.addEventListener('click', function () {
-        currentIndex = (currentIndex === titles.length - 1) ? 0 : currentIndex + 1;
-        updateContent(currentIndex);
+    document.getElementById('next-slide').addEventListener('click', function () {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
     });
 
-    updateContent(currentIndex);
+    updateSlide(); // Initialize the first slide
 });
+
