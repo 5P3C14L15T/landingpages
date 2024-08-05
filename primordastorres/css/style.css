@@ -318,7 +318,7 @@ h2.mb-4 {
 @media (max-width: 768px) {
     .text-gradient-large {
         /* background: linear-gradient(to right, #ffd700, #e6b800, #cc9900, #b37800, #996600); */
-        background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+        background-image: linear-gradient(to right, rgb(101, 88, 63) 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 2rem;
@@ -386,6 +386,11 @@ h2.mb-4 {
     #video-tour h2, h3, p{
         text-align: center !important;
     }
+
+    .contato-p {
+        text-align: left !important;
+    }
+   
 }
 
 
@@ -425,6 +430,7 @@ h2.mb-4 {
 
 #contato-tour {
     background-color: #2a2b31;
+    padding: 80px 0;
 }
 
 #contato-tour .titulo-primor {
@@ -456,10 +462,47 @@ h2.mb-4 {
 
 #contato-tour #contato-info a {
     color: #ffd700; /* Cor dourada */
+    font-weight: 100 !important;
+    text-decoration: none;
 }
 
 #contato-tour #contato-info a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
+
+#contato-tour img {
+    /* width: 400px !important; */
+    height: auto !important;
+    object-fit: cover;
+}
+
+#contato-tour .img-fluid {
+    max-width: 300px !important;
+}
+
+#contato-tour .text-md-left {
+    text-align: left !important;
+}
+
+.dynamic-title, .dynamic-description {
+    text-align: left !important;
+    font-weight: 100 !important;
+}
+
+.contato-info p i {
+    text-align: left !important;
+    font-weight: 100 !important;
+    
+}
+
+.dynamic-description {
+    font-weight: 100;
+    text-align: justify !important;
+}
+
+.social-links a {
+    text-decoration: none !important;
+}
+
 
