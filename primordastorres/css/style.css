@@ -264,7 +264,7 @@ h2.mb-4 {
     background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif !important;
 }
 .dynamic-title {
     margin-top: 50px;
@@ -272,7 +272,7 @@ h2.mb-4 {
     background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif !important;
 }
 
 /* Background image for the Caracteristicas section */
@@ -346,7 +346,8 @@ h2.mb-4 {
 }
 
 
-/* vídeo */#video-tour {
+/* vídeo */
+#video-tour {
     background-color: #2a2b31;
     color: #ffffff;
 }
@@ -381,6 +382,10 @@ h2.mb-4 {
     #video-tour .col-md-4 {
         margin-bottom: 30px; /* Adiciona espaçamento abaixo do col-md-4 */
     }
+
+    #video-tour h2, h3, p{
+        text-align: center !important;
+    }
 }
 
 
@@ -411,5 +416,50 @@ h2.mb-4 {
     width: 100%;
     height: auto;
     border: 0; /* Remove bordas, se houver */
+}
+
+
+/* corretor */
+
+/* Estilos para a nova seção de contato tour */
+
+#contato-tour {
+    background-color: #2a2b31;
+}
+
+#contato-tour .titulo-primor {
+    font-family: 'Luxury', sans-serif; /* Substitua pela fonte que você está utilizando */
+    color: #ffd700; /* Cor dourada */
+}
+
+#contato-tour .text-center h3 {
+    font-size: 1.5rem;
+    color: #ffd700; /* Cor dourada */
+    text-align: left;
+}
+
+#contato-tour .text-center p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+#contato-tour #contato-info h4 {
+    font-size: 1.2rem;
+    color: #ffd700; /* Cor dourada */
+}
+
+#contato-tour #contato-info p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+#contato-tour #contato-info a {
+    color: #ffd700; /* Cor dourada */
+}
+
+#contato-tour #contato-info a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
