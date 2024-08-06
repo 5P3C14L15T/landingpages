@@ -1,17 +1,49 @@
 document.addEventListener('DOMContentLoaded', function () {
     const slides = [
         {
-            title: 'Título Dinâmico 1',
-            description: 'Descrição correspondente ao slide 1.'
+            title: 'Entrada',
+            description: 'Ampla e rápida.'
         },
         {
-            title: 'Título Dinâmico 2',
-            description: 'Descrição correspondente ao slide 2.'
+            title: 'Área de Lazer',
+            description: 'Quadras e campo de futebol.'
         },
         {
-            title: 'Título Dinâmico 3',
-            description: 'Descrição correspondente ao slide 3.'
-        }
+            title: 'Vista aérea',
+            description: 'Disposição de todo o condomínio com.'
+        },
+        {
+            title: 'Toda a área de lazer',
+            description: 'Campo, quadras, piscina, parque, salão de festa.'
+        },
+        {
+            title: 'Entrada do condomínio',
+            description: 'Visão da entrada do condomínio por trás da portaria.'
+        },
+        {
+            title: 'Piscina',
+            description: 'Enorme pisicna para se refrescar.'
+        },
+        {
+            title: 'Parquinho',
+            description: 'Local específico para as crianças brincarem.'
+        },
+        {
+            title: 'Salão de festas',
+            description: 'Entrada do salão de festas.'
+        },
+        {
+            title: 'Quadra de beach tenis e Área gourmet',
+            description: 'Espaço para a família se confraternizar e praticar esporte.'
+        },
+        {
+            title: 'Espaço Gourmet',
+            description: 'Espaço climatizado para reuniões e confraternizações.'
+        },
+        {
+            title: 'Quadra de esportes',
+            description: 'Quadra de futebol e basquete.'
+        },
     ];
 
     let currentSlide = 0;
