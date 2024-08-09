@@ -1,3 +1,17 @@
+<?php
+session_start(); // Inicia a sessão
+
+// Verifica se existe uma mensagem de sucesso ou erro na sessão
+if (isset($_SESSION['success_message'])) {
+    echo "<div class='alert alert-success'>{$_SESSION['success_message']}</div>";
+    unset($_SESSION['success_message']); // Remove a mensagem após exibir
+}
+
+if (isset($_SESSION['error_message'])) {
+    echo "<div class='alert alert-danger'>{$_SESSION['error_message']}</div>";
+    unset($_SESSION['error_message']); // Remove a mensagem após exibir
+}
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -10,17 +24,12 @@
 
     <!-- Bootstrap CSS v5.3.2 -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
 
 </head>
 
@@ -32,8 +41,7 @@
                 <a href="#" class="navbar-brand">
                     <img src="images/logo.png" alt="Logo" height="50">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -71,20 +79,17 @@
                 <div class="col-md-4">
                     <div class="form-container">
                         <p class="form-p">Entre em contato para mais informações:</p>
-                        <form>
+                        <form method="post" enctype="multipart/form-data" action="whatsapp.php">
                             <div class="mb-3">
-                                <input placeholder="Nome" type="text" class="form-control form-input" id="name"
-                                    required>
+                                <input placeholder="Nome" name="name" type="text" class="form-control form-input" id="name" required>
                             </div>
                             <div class="mb-3">
-                                <input placeholder="Email" type="email" class="form-control form-input" id="email"
-                                    required>
+                                <input placeholder="Email" name="email" type="email" class="form-control form-input" id="email" required>
                             </div>
                             <div class="mb-3">
-                                <input placeholder="WhatsApp" type="tel" class="form-control form-input" id="whatsapp"
-                                    required>
+                                <input placeholder="WhatsApp" name="whatsapp" type="tel" class="form-control form-input" id="whatsapp" required>
                             </div>
-                            <button type="submit" class="button">Enviar</button>
+                            <input type="submit" value="Enviar" class="button">
                         </form>
                     </div>
                 </div>
@@ -102,28 +107,17 @@
                     <div class="col-md-8">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                                    aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                                    aria-label="Slide 5"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-                                    aria-label="Slide 6"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
-                                    aria-label="Slide 7"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
-                                    aria-label="Slide 8"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
-                                    aria-label="Slide 9"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
-                                    aria-label="Slide 10"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
-                                    aria-label="Slide 11"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
 
                             </div>
                             <div class="carousel-inner">
@@ -385,7 +379,7 @@
         <!-- /galeria -->
 
         <!-- detalhes -->
-    
+
         <section id="ebook-download" class="d-flex" style="background: rgb(94, 94, 94);">
             <div class="container d-flex align-items-center justify-content-center">
                 <div class="row w-100">
@@ -394,7 +388,7 @@
                         <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
                             <img src="images/ebook.png" class="img-fluid" alt="Ebook cover" style="max-width: 400px;">
                         </div>
-        
+
                         <!-- Text and Button Section -->
                         <div class="col-md-6 text-white text-left">
                             <h2 class="mb-3 luxury-font2" style="font-size: 2.5rem;">Ebook Casa Primor das Torres</h2>
@@ -405,8 +399,8 @@
                 </div>
             </div>
         </section>
-        
-        
+
+
 
         <!-- /detalhes -->
 
@@ -436,24 +430,16 @@
                                 </div>
                                 <div id="contato-info" class="mt-3 text-md-left">
                                     <h4>Contato</h4>
-                                    <p class="contato-p"><i class="fab fa-whatsapp"></i> WhatsApp: <a
-                                            href="https://api.whatsapp.com/send?phone=5565996335509&text=Quero%20saber%20mais%20sobre%20essa%20casa%20no%20*PRIMOR%20DAS%20TORRES*"
-                                            class="text-white">(65) 99633-5509</a></p>
-                                    <p class="contato-p"><i class="fas fa-envelope"></i> Email: <a
-                                            href="mailto:administrativo@imobiliatto.com.br"
-                                            class="text-white">administrativo@imobiliatto.com.br</a></p>
+                                    <p class="contato-p"><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://api.whatsapp.com/send?phone=5565996335509&text=Quero%20saber%20mais%20sobre%20essa%20casa%20no%20*PRIMOR%20DAS%20TORRES*" class="text-white">(65) 99633-5509</a></p>
+                                    <p class="contato-p"><i class="fas fa-envelope"></i> Email: <a href="mailto:administrativo@imobiliatto.com.br" class="text-white">administrativo@imobiliatto.com.br</a></p>
                                 </div>
                                 <div id="social-media-links" class="mt-3 text-md-left">
                                     <h4>Redes Sociais</h4>
                                     <p class="social-links">
-                                        <a href="https://www.instagram.com/joaocorretorimobiliario"
-                                            class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                                        <a href="https://www.facebook.com/joaocorretorimobiliariomt"
-                                            class="text-white me-2"><i class="fab fa-facebook"></i></a>
-                                        <a href="https://www.tiktok.com/@joaocorretorimobiliario"
-                                            class="text-white me-2"><i class="fab fa-tiktok"></i></a>
-                                        <a href="https://www.linkedin.com/in/joaovictorvieira/" class="text-white"><i
-                                                class="fab fa-linkedin"></i></a>
+                                        <a href="https://www.instagram.com/joaocorretorimobiliario" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.facebook.com/joaocorretorimobiliariomt" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://www.tiktok.com/@joaocorretorimobiliario" class="text-white me-2"><i class="fab fa-tiktok"></i></a>
+                                        <a href="https://www.linkedin.com/in/joaovictorvieira/" class="text-white"><i class="fab fa-linkedin"></i></a>
                                     </p>
                                 </div>
                             </div>
@@ -478,43 +464,35 @@
                     <p>CRECI 14137 J</p>
                     <p>Rua Américo Salgado, 1044 - Araés</p>
                     <p>Cuiabá/MT CEP: 78005-540</p>
-                   
+
                     <p><a href="mailto:administrativo@imobiliatto.com.br" class="text-white">administrativo@imobiliatto.com.br</a></p>
                     <p><a href="tel:+5565996335509" class="text-white">(65) 99633-5509</a></p>
                 </div>
-    
+
                 <!-- Right Column -->
                 <div class="col-md-6">
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15369.7445498756!2d-56.0054908!3d-15.6217469!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939da541197912a3%3A0x39b18998900661c6!2sCondom%C3%ADnio%20Primor%20das%20Torres!5e0!3m2!1spt-BR!2sbr!4v1722902599786!5m2!1spt-BR!2sbr"
-                            frameborder="0"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15369.7445498756!2d-56.0054908!3d-15.6217469!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939da541197912a3%3A0x39b18998900661c6!2sCondom%C3%ADnio%20Primor%20das%20Torres!5e0!3m2!1spt-BR!2sbr!4v1722902599786!5m2!1spt-BR!2sbr" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    
-    
-    
+
+
+
     <!-- Bootstrap JavaScript Libraries -->
 
     <!-- Contact Button -->
-<a href="https://api.whatsapp.com/send?phone=5565996335509&text=Quero%20saber%20mais%20sobre%20essa%20casa%20no%20*PRIMOR%20DAS%20TORRES*" class="contact-button">
-    <img src="images/ajuda.png" alt="Contato">
-</a>
+    <a href="https://api.whatsapp.com/send?phone=5565996335509&text=Quero%20saber%20mais%20sobre%20essa%20casa%20no%20*PRIMOR%20DAS%20TORRES*" class="contact-button">
+        <img src="images/ajuda.png" alt="Contato">
+    </a>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>

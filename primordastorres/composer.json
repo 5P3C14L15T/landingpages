@@ -1,0 +1,17 @@
+{
+    "name": "joaov/primordastorres",
+    "autoload": {
+        "psr-4": {
+            "Joaov\\Primordastorres\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "João Victor",
+            "email": "joaovictorvieira@outlook.com.br"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
